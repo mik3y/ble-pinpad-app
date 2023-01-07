@@ -1,8 +1,7 @@
-import { registerRootComponent } from 'expo';
-
-import App from './App';
-
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+// This file should not be necessary. We should be able to
+// declare { "main": "src/index.js" } in package.json per the
+// instructions [1]. But bundling subsequently gives me an
+// error, sigh. Creating this shim and moving on with life.
+//
+// [1] https://docs.expo.dev/versions/latest/sdk/register-root-component/#what-if-i-want-to-name-my-main-app-file-something-other-than-appjs
+import './src/index';
