@@ -6,6 +6,8 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 import { BluetoothContextProvider } from './component/BluetoothContext';
+import MainView from './view/MainView';
+import RootView from './view/RootView';
 
 // TODO(mikey): Use our very own special colors here.
 const theme = {
@@ -26,22 +28,10 @@ export default function App() {
       <SafeAreaProvider>
         <NavigationContainer>
           <BluetoothContextProvider>
-            <View style={styles.container}>
-              <Text>Open up App.tsx to start working on your app!</Text>
-              <StatusBar style="auto" />
-            </View>
+            <RootView />
           </BluetoothContextProvider>
         </NavigationContainer>
       </SafeAreaProvider>
     </PaperProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

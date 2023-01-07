@@ -1,12 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import { NativeEventEmitter, NativeModules, PermissionsAndroid, Platform } from 'react-native';
 import { BleManager } from 'react-native-ble-plx';
 
 import { PINPAD_SERVICE_UUID } from '../lib/constants';
 import SplashView from '../view/SplashView';
-
-const SCAN_SECONDS = 10;
 
 const BLE = new BleManager();
 
@@ -20,6 +17,8 @@ const BluetoothContext = React.createContext({
   selectedDevice: null,
   connectedDevice: null,
   allDevices: [],
+  startScan: () => {},
+  stopScan: () => {},
 });
 
 export const BluetoothContextProvider = function ({ children }) {
@@ -101,6 +100,8 @@ export const BluetoothContextProvider = function ({ children }) {
         selectedDevice,
         connectedDevice,
         allDevices,
+        startScan,
+        stopScan,
       }}
     >
       {getComponentToRender()}
