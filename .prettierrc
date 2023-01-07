@@ -1,0 +1,8 @@
+{
+  "printWidth": 100,
+  "singleQuote": true,
+  "importOrder": ["^react$", "<THIRD_PARTY_MODULES>", "^[./]", "^.*(css)$"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderParserPlugins": ["classProperties", "exportDefaultFrom", "jsx"]
+}
