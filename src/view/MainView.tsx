@@ -34,7 +34,7 @@ const DeviceCard = ({ device, onPress = () => {}, ...cardProps }) => {
 };
 
 const DiscoveredDeviceList = () => {
-  const { isScanning, allDevices } = useContext(BluetoothContext);
+  const { isScanning, allDevices, startScan } = useContext(BluetoothContext);
 
   const deviceItems = Object.entries(allDevices).map(([deviceId, device]) => {
     return <DeviceCard key={`device-${deviceId}`} device={device} />;
@@ -46,7 +46,7 @@ const DiscoveredDeviceList = () => {
 
       <ScrollView
         style={styles.scrollView}
-        refreshControl={<RefreshControl refreshing={false} onRefresh={() => {}} />}
+        refreshControl={<RefreshControl refreshing={isScanning} onRefresh={startScan} />}
       >
         {deviceItems}
         <View style={{ marginBottom: 30 }}></View>

@@ -61,6 +61,7 @@ export const BluetoothContextProvider = function ({ children }) {
       }
       handleDeviceDiscovered(device);
     });
+    setTimeout(() => stopScan(), SCAN_TIMEOUT_SECONDS * 1000);
   };
 
   const stopScan = () => {
