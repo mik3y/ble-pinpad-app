@@ -4,6 +4,18 @@
   <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
   <uses-permission android:name="android.permission.VIBRATE"/>
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+  <!-- Begin BLEPinpad changes: Add BLE permissions. -->
+  <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="28"/>
+  <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" tools:targetApi="Q"/>
+  <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" 
+                    android:usesPermissionFlags="neverForLocation"
+                    tools:targetApi="s" />
+  <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+  <!-- End BLEPinpad changes -->
+
   <queries>
     <intent>
       <action android:name="android.intent.action.VIEW"/>

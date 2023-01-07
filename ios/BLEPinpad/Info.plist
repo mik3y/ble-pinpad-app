@@ -72,5 +72,7 @@
     <string>Light</string>
     <key>UIViewControllerBasedStatusBarAppearance</key>
     <false/>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>For finding nearby BLE pinpad devices.</string>
   </dict>
 </plist>
