@@ -5,6 +5,8 @@ import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
+import { BluetoothContextProvider } from './component/BluetoothContext';
+
 // TODO(mikey): Use our very own special colors here.
 const theme = {
   ...DefaultTheme,
@@ -23,10 +25,12 @@ export default function App() {
     >
       <SafeAreaProvider>
         <NavigationContainer>
-          <View style={styles.container}>
-            <Text>Open up App.tsx to start working on your app!</Text>
-            <StatusBar style="auto" />
-          </View>
+          <BluetoothContextProvider>
+            <View style={styles.container}>
+              <Text>Open up App.tsx to start working on your app!</Text>
+              <StatusBar style="auto" />
+            </View>
+          </BluetoothContextProvider>
         </NavigationContainer>
       </SafeAreaProvider>
     </PaperProvider>
