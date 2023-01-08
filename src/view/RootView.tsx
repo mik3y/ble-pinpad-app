@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { StyleSheet } from 'react-native';
 import { useTheme } from 'react-native-paper';
 
+import DeviceView from './DeviceView';
 import MainView from './MainView';
 
 const RootStack = createStackNavigator();
@@ -21,6 +21,7 @@ const RootStackScreen = () => {
       }}
     >
       <RootStack.Screen name="MainScreen" component={MainView} options={{ title: 'BLE Pinpad' }} />
+      <RootStack.Screen name="DeviceScreen" component={DeviceView} options={{ title: 'Pin In' }} />
     </RootStack.Navigator>
   );
 };

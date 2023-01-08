@@ -4,6 +4,7 @@
  */
 import { useContext } from 'react';
 
+import { useNavigation } from '@react-navigation/native';
 import { RefreshControl, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Card } from 'react-native-paper';
 
@@ -35,9 +36,18 @@ const DeviceCard = ({ device, onPress = () => {}, ...cardProps }) => {
 
 const DiscoveredDeviceList = () => {
   const { isScanning, allDevices, startScan } = useContext(BluetoothContext);
+  const navigation = useNavigation();
 
   const deviceItems = Object.entries(allDevices).map(([deviceId, device]) => {
-    return <DeviceCard key={`device-${deviceId}`} device={device} />;
+    return (
+      <DeviceCard
+        key={`device-${deviceId}`}
+        device={device}
+        onPress={() => {
+          navigation.navigate('DeviceScreen', { deviceId });
+        }}
+      />
+    );
   });
 
   return (
