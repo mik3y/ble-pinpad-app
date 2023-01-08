@@ -2,6 +2,8 @@
 
 Simple iOS/Android (react native) app that discovers nearby Bluetooth LE pinpads and lets you send a pin to them.
 
+![Screenshot 1: Nearby device list](https://user-images.githubusercontent.com/390829/211176134-dd687816-d706-46b8-955c-183e3bf18bea.PNG) ![Screenshot 2: Auth screen](https://user-images.githubusercontent.com/390829/211176131-4012d7c7-74e9-4a20-a13d-8bed02144571.PNG)
+
 > **Status**: 🚨 Experimental! Use at your own risk.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
