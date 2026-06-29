@@ -33,6 +33,15 @@ yarn install
 
 ### Running against local device
 
+The native `ios/` and `android/` projects are generated and are not checked in.
+Generate them (and install CocoaPods) with:
+
+```
+yarn expo prebuild
+```
+
+Then build and run on a device or simulator:
+
 ```
 yarn expo run:ios --device
 ```

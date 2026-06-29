@@ -9,7 +9,7 @@ const RootStackScreen = () => {
   const { colors } = useTheme();
   return (
     <RootStack.Navigator
-      initialRouteName="Main"
+      initialRouteName="MainScreen"
       screenOptions={{
         headerShown: true,
         headerStyle: {

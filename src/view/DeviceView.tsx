@@ -46,7 +46,7 @@ const Authenticator = ({ device }) => {
         textContentType="password"
         secureTextEntry
         placeholder=""
-        autoCompleteType="password"
+        autoComplete="password"
         autoCorrect={false}
         editable={!isSubmitting}
       />
